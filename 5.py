@@ -33,11 +33,15 @@ def excludeTest(line):
 
 def twoPairsTest(line):
     #There must be two copies of a pair of letters
-    #regex means 0 or more characters, then a particular character twice, then 0 or more characters, then the particular character twice more
-    result = re.search(r'.*(.)\1.*\1{2}', line)
-    if result != None:
-        return False
-    return True
+    n = len(line)
+    for i in range(n-3):
+        t1 = line[i]
+        t2 = line[i+1]
+        for j in range(i+2,n-1):
+            if (line[j] == t1) and (line[j+1] == t2):
+                return True
+    
+    return False
 
 
 def displacedPairTest(line):
@@ -55,7 +59,7 @@ def displacedPairTest(line):
 if __name__ == '__main__':
     nice = 0
     old = False
-    f = open("inputs/5test.txt")
+    f = open("inputs/5.txt")
     for line in f:
         l = line.strip('\n')
         if old:
@@ -71,6 +75,7 @@ if __name__ == '__main__':
                 print("DP failed")
                 continue
             if not twoPairsTest(l):
+                print("2Pair failed")
                 continue
             nice += 1
 
