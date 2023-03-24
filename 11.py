@@ -53,7 +53,6 @@ def test(word):
             return False
 
     return True
-        
 
 if __name__ == '__main__':
     word = "hxbxwxba"

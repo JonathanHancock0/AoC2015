@@ -50,8 +50,6 @@ def generate_permutations(n, route=""):
                 output.extend(to_add)
         return output
 
-
-
 if __name__ == '__main__':
     f = open("inputs/9.txt")
     short = False
@@ -104,6 +102,5 @@ if __name__ == '__main__':
                 best = total
                 goodperm = permutation
 
-    
     print(f"Best route is {goodperm}, total distance {best}")
             

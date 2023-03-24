@@ -33,8 +33,6 @@ def encode(filename):
         total += increase
     return total
 
-
-
 if __name__ == '__main__':
     answer1 = decode("inputs/8.txt")
     answer2 = encode("inputs/8.txt")

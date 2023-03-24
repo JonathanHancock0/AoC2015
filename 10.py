@@ -20,9 +20,6 @@ def process(num):
     output += prev
     return output
 
-        
-
-
 if __name__ == '__main__':
     value = "1113222113"
     iterations = 50
